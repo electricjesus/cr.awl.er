@@ -24,7 +24,7 @@ $grepped = `cat temp`;
 $grepped = str_replace("\r\n", "", $grepped);
 $grepped = str_replace("\t", "", $grepped);
 $grepped = str_replace("class=\"unnamed9\"", "\nclass=\"unnamed9\"", $grepped);
-$grepped = str_replace("</table>", "\n</table>", $grepped);
+$grepped = str_replace("Label7", "Label7\n", $grepped);
 $fp = fopen('temp2', 'w');
 fwrite($fp, $grepped);
 fclose($fp);
